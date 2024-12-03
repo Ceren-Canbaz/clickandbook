@@ -1,4 +1,6 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:clickandbook/core/main/dashboard.dart';
+
 import 'package:clickandbook/core/routes/router.gr.dart';
 
 @AutoRouterConfig(replaceInRouteName: 'Screen,Route')
@@ -7,9 +9,20 @@ class AppRouter extends RootStackRouter {
   RouteType get defaultRouteType => const RouteType.material();
   @override
   List<AutoRoute> get routes => [
-        AutoRoute(page: NavigationBarRoute.page, initial: true, children: [
-          AutoRoute(page: HomeRoute.page, initial: true),
-          AutoRoute(page: AuthRoute.page),
-        ]),
+        CustomRoute(
+          page: PageInfo(
+            "dashboard",
+            builder: (data) {
+              return const DashboardPage();
+            },
+          ),
+          children: [
+            AutoRoute(page: HomeRoute.page, initial: true),
+            AutoRoute(
+              page: AuthRoute.page,
+            ),
+          ],
+          initial: true,
+        ),
       ];
 }

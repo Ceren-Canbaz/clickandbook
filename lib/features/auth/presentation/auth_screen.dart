@@ -9,10 +9,8 @@ class AuthScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          context.router.push(const HomeRoute());
-        },
+      body: Center(
+        child: Text("Auth"),
       ),
     );
   }
