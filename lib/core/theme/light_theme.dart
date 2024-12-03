@@ -54,4 +54,8 @@ final ThemeData lightTheme = ThemeData(
     ),
     hintStyle: const TextStyle(color: Colors.black45),
   ),
+  bottomNavigationBarTheme: const BottomNavigationBarThemeData(
+    backgroundColor: backgroundColor,
+    elevation: 0,
+  ),
 );

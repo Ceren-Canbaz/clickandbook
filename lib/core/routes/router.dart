@@ -1,5 +1,5 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:clickandbook/core/main/dashboard.dart';
+import 'package:clickandbook/core/dashboard/dashboard.dart';
 
 import 'package:clickandbook/core/routes/router.gr.dart';
 
