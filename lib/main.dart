@@ -1,5 +1,5 @@
 import 'package:clickandbook/core/theme/light_theme.dart';
-import 'package:clickandbook/firebase_options.dart';
+import 'package:clickandbook/core/firebase/firebase_options.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
