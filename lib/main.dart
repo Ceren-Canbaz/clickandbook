@@ -1,3 +1,4 @@
+import 'package:clickandbook/core/routes/router.dart';
 import 'package:clickandbook/core/theme/light_theme.dart';
 import 'package:clickandbook/core/firebase/firebase_options.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -8,19 +9,20 @@ void main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  MyApp({super.key});
+  final _appRouter = AppRouter();
 
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
       title: "Click&Book",
       theme: lightTheme,
-      home: const MyHomePage(),
+      routerConfig: _appRouter.config(),
     );
   }
 }

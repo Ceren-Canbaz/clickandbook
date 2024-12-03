@@ -3,18 +3,18 @@ import 'package:clickandbook/core/routes/router.gr.dart';
 import 'package:flutter/material.dart';
 
 @RoutePage()
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+class AuthScreen extends StatelessWidget {
+  const AuthScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Home"),
+        title: const Text("Auth"),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          context.router.push(const AuthRoute());
+          context.router.push(const HomeRoute());
         },
       ),
     );
