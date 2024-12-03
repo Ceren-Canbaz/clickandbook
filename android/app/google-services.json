@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "653084229146",
+    "project_id": "click-book-3a239",
+    "storage_bucket": "click-book-3a239.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:653084229146:android:3a9a7c351a17b04cc99ba3",
+        "android_client_info": {
+          "package_name": "com.clickandbook.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDUBTsfoXyzREesHDm03taB8cTJ7dk_JfI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
