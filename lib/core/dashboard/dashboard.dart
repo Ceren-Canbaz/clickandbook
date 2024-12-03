@@ -1,7 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:clickandbook/core/constants/svg_paths.dart';
 import 'package:clickandbook/core/style/widgets/navbar_item.dart';
-import 'package:clickandbook/core/theme/light_theme.dart';
+
 import 'package:flutter/material.dart';
 
 class DashboardPage extends StatelessWidget {
