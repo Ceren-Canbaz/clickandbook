@@ -6,16 +6,18 @@ class NavBarIcon extends StatelessWidget {
   const NavBarIcon({
     super.key,
     required this.svgPath,
+    required this.isActive,
   });
   final String svgPath;
+  final bool isActive;
 
   @override
   Widget build(BuildContext context) {
     return SvgPicture.asset(
       svgPath,
-      height: 24,
-      colorFilter: const ColorFilter.mode(
-        primaryColor,
+      height: isActive ? 36 : 32,
+      colorFilter: ColorFilter.mode(
+        isActive ? secondaryColor : accentColor3,
         BlendMode.srcIn,
       ),
     );
