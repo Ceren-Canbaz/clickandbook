@@ -1,7 +1,8 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:clickandbook/core/constants/svg_paths.dart';
-import 'package:clickandbook/core/theme/light_theme.dart';
+
 import 'package:clickandbook/features/home/presentation/widgets/category_section.dart';
+import 'package:flutter/foundation.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -46,37 +47,43 @@ class HomeScreen extends StatelessWidget {
       },
     ];
     return Scaffold(
-      appBar: AppBar(
-        centerTitle: false,
-        titleSpacing: 0,
-        title: Padding(
-          padding: const EdgeInsets.all(12.0),
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              const Text(
-                "Click&Book",
+      body: CustomScrollView(
+        slivers: [
+          SliverAppBar(
+            expandedHeight: 72,
+            flexibleSpace: FlexibleSpaceBar(
+              title: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const SizedBox(
+                    width: 10,
+                  ),
+                  const Text(
+                    "Click&Book",
+                    style: TextStyle(
+                      fontWeight: FontWeight.w200,
+                    ),
+                  ),
+                  Opacity(
+                    opacity: 0.8,
+                    child: SvgPicture.asset(
+                      SvgPaths.vectorPattern,
+                      height: 32,
+                    ),
+                  ),
+                ],
               ),
-              Opacity(
-                opacity: 0.8,
-                child: SvgPicture.asset(
-                  SvgPaths.vectorPattern,
-                  height: 32,
-                  // colorFilter: const ColorFilter.mode(
-                  //   secondaryColor,
-                  //   BlendMode.srcIn,
-                  // ),
+            ),
+          ),
+          SliverToBoxAdapter(
+            child: Column(
+              children: [
+                CategorySection(
+                  categories: categories,
                 ),
-              ),
-            ],
-          ),
-        ),
-      ),
-      body: ListView(
-        children: [
-          CategorySection(
-            categories: categories,
-          ),
+              ],
+            ),
+          )
         ],
       ),
     );

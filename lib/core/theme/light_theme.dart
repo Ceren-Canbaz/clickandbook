@@ -18,6 +18,7 @@ final ThemeData lightTheme = ThemeData(
   scaffoldBackgroundColor: backgroundColor,
   appBarTheme: const AppBarTheme(
     backgroundColor: backgroundColor,
+    surfaceTintColor: Colors.transparent,
     elevation: 0,
     titleTextStyle:
         TextStyle(fontWeight: FontWeight.w200, color: textColor, fontSize: 24),
