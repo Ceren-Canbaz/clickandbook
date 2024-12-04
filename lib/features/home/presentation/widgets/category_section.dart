@@ -12,9 +12,9 @@ class CategorySection extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         const Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16),
+          padding: EdgeInsets.symmetric(horizontal: 16),
           child: TitleText(
-            text: "Categories",
+            text: "Kategoriler",
           ),
         ),
         const SizedBox(

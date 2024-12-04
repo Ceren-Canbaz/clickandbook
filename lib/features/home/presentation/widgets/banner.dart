@@ -35,7 +35,7 @@ class HomeBanner extends StatelessWidget {
                   text: TextSpan(
                     children: [
                       TextSpan(
-                        text: 'Coming soon: ',
+                        text: 'Lorem Ipsum: ',
                         style: Theme.of(context)
                             .textTheme
                             .headlineMedium
@@ -45,14 +45,14 @@ class HomeBanner extends StatelessWidget {
                             ),
                       ),
                       TextSpan(
-                        text: '40-50 more service providers ',
+                        text: 'Lorem ipsum dolor sit amet',
                         style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                               fontSize: 16,
                               fontWeight: FontWeight.w500,
                             ),
                       ),
                       TextSpan(
-                        text: 'will be at your fingertips!',
+                        text: ' lorem ipsum dolor sit amet',
                         style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                               fontSize: 16,
                               fontWeight: FontWeight.normal,
