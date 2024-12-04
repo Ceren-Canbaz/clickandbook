@@ -1,4 +1,4 @@
-import 'package:clickandbook/core/style/widgets/category_item.dart';
+import 'package:clickandbook/features/category/category_item.dart';
 import 'package:clickandbook/core/style/widgets/title_text.dart';
 
 import 'package:flutter/material.dart';
