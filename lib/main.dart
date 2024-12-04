@@ -1,4 +1,5 @@
 import 'package:clickandbook/core/routes/router.dart';
+import 'package:clickandbook/core/services/injectable.dart';
 import 'package:clickandbook/core/theme/light_theme.dart';
 import 'package:clickandbook/core/firebase/firebase_options.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -9,6 +10,7 @@ void main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
+  configureDependencies();
   runApp(MyApp());
 }
 

@@ -10,52 +10,17 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    //mock firebase initialize edildikten sonra degisecek.
-    final List<Map<String, String>> categories = [
-      {
-        'name': 'Kadın Kuaförü',
-        'image':
-            'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdRSLpffU1F920M_pZU-IgqNGqkM91eUTNcw&s'
-      },
-      {
-        'name': 'Erkek Kuaförü',
-        'image':
-            'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRl--_CbTSLSEQ_q6WODNT-4xSp9Zq5fqBCsw&s'
-      },
-      {
-        'name': 'Berber',
-        'image':
-            'https://heyjoebrand.com/wp-content/uploads/barberia-destacada-does-barbershop.jpg.webp'
-      },
-      {
-        'name': 'Tırnak Bakımı',
-        'image':
-            'https://ndnailsupply.com/cdn/shop/articles/4_Steps_to_Run_a_Nail_Salon_Business_to_Always_Have_Profit.jpg?v=1635846173'
-      },
-      {
-        'name': 'Masaj',
-        'image':
-            'https://lapisinnhotel.com/wp-content/uploads/2020/07/BY-81.jpg'
-      },
-      {
-        'name': 'Cilt Bakımı',
-        'image':
-            'https://mahekbeauty.com/wp-content/uploads/2022/08/beautician-with-brush-applies-white-moisturizing-mask-face-young-girl-client-spa-beauty-salon.jpg'
-      },
-    ];
-    return Scaffold(
+    return const Scaffold(
       body: CustomScrollView(
         slivers: [
-          const HomeAppBar(),
+          HomeAppBar(),
           SliverToBoxAdapter(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const HomeBanner(),
-                const SizedBox(
-                  height: 12,
-                ),
-                CategorySection(categories: categories),
+                HomeBanner(),
+                SizedBox(height: 12),
+                CategorySection(),
               ],
             ),
           ),
