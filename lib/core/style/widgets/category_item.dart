@@ -23,8 +23,8 @@ class CategoryItem extends StatelessWidget {
           ClipOval(
             child: Image.network(
               imageUrl,
-              height: 82,
-              width: 82,
+              height: 72,
+              width: 72,
               fit: BoxFit.fitHeight,
               loadingBuilder: (context, child, loadingProgress) {
                 if (loadingProgress == null) return child;

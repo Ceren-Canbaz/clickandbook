@@ -13,6 +13,8 @@ const Color backgroundColor = Color(0xFFF8F8F8);
 const Color textColor = Color(0xFF000000);
 const Color lightTextColor = Color(0xFF8A8A8A);
 
+const Color titleTextColor = Color.fromARGB(255, 97, 97, 97);
+
 final ThemeData lightTheme = ThemeData(
   primaryColor: primaryColor,
   scaffoldBackgroundColor: backgroundColor,
@@ -63,7 +65,10 @@ final ThemeData lightTheme = ThemeData(
       backgroundColor: accentColor1,
       foregroundColor: Colors.white,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+      padding: const EdgeInsets.symmetric(
+        horizontal: 20,
+        vertical: 10,
+      ),
     ),
   ),
   floatingActionButtonTheme: const FloatingActionButtonThemeData(

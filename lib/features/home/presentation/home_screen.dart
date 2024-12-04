@@ -1,11 +1,8 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:clickandbook/core/constants/svg_paths.dart';
-
+import 'package:clickandbook/features/home/presentation/widgets/banner.dart';
 import 'package:clickandbook/features/home/presentation/widgets/category_section.dart';
-import 'package:flutter/foundation.dart';
-
+import 'package:clickandbook/features/home/presentation/widgets/home_appbar.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 
 @RoutePage()
 class HomeScreen extends StatelessWidget {
@@ -49,41 +46,19 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       body: CustomScrollView(
         slivers: [
-          SliverAppBar(
-            expandedHeight: 72,
-            flexibleSpace: FlexibleSpaceBar(
-              title: Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const SizedBox(
-                    width: 10,
-                  ),
-                  const Text(
-                    "Click&Book",
-                    style: TextStyle(
-                      fontWeight: FontWeight.w200,
-                    ),
-                  ),
-                  Opacity(
-                    opacity: 0.8,
-                    child: SvgPicture.asset(
-                      SvgPaths.vectorPattern,
-                      height: 32,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          ),
+          const HomeAppBar(),
           SliverToBoxAdapter(
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                CategorySection(
-                  categories: categories,
+                const HomeBanner(),
+                const SizedBox(
+                  height: 12,
                 ),
+                CategorySection(categories: categories),
               ],
             ),
-          )
+          ),
         ],
       ),
     );
